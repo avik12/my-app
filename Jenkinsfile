@@ -19,5 +19,12 @@ pipeline{
             slackSend baseUrl: 'https://hooks.slack.com/services/', channel: '#jenkins-demo-123', color: 'good', message: 'Welcome To Slack Jenkins', teamDomain: 'app.slack.com', tokenCredentialId: 'Jenkins-slack-demo'
                 }
             } 
+            stage("scan SonarQube"){
+                steps{
+                withSonarQubeEnv('SonarQb') {
+                sh 'mvn clean package sonar:sonar'    
+                }
+            }
         }
     }
+}
