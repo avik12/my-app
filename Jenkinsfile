@@ -8,6 +8,7 @@ pipeline{
                 steps{
                      sh 'git 'https://github.com/avik12/my-app.git'   
                 }
+            }
             stage("maven Build"){
                 steps{
                      sh 'mvn clean package'   
