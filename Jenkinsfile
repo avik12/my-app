@@ -6,7 +6,7 @@ pipeline{
         stages {
             stage("git Checkout"){
                 steps{
-                     sh 'git https://github.com/avik12/my-app.git'   
+                     sh git 'https://github.com/avik12/my-app.git'  
                 }
             }
             stage("maven Build"){
