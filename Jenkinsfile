@@ -4,7 +4,7 @@ pipeline{
         maven 'Maven1'
     }    
         stages {
-            stage("git Checkout"){
+            stage("gitHub Checkout"){
                 steps{
                      git 'https://github.com/avik12/my-app.git'  
                 }
